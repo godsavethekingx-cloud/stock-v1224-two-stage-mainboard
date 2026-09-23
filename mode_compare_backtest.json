@@ -1,0 +1,1770 @@
+{
+  "A": {
+    "stat": {
+      "n": 75,
+      "avg": 3.92,
+      "med": 3.1,
+      "win": 77.3,
+      "max": 21.33,
+      "min": -5.97
+    },
+    "daily": [
+      {
+        "date": "2026-09-01",
+        "n": 5,
+        "avg": 6.95,
+        "win": 100.0
+      },
+      {
+        "date": "2026-09-02",
+        "n": 5,
+        "avg": 0.24,
+        "win": 40.0
+      },
+      {
+        "date": "2026-09-03",
+        "n": 5,
+        "avg": 4.53,
+        "win": 100.0
+      },
+      {
+        "date": "2026-09-04",
+        "n": 5,
+        "avg": 7.95,
+        "win": 80.0
+      },
+      {
+        "date": "2026-09-07",
+        "n": 5,
+        "avg": 4.3,
+        "win": 100.0
+      },
+      {
+        "date": "2026-09-08",
+        "n": 5,
+        "avg": 4.37,
+        "win": 100.0
+      },
+      {
+        "date": "2026-09-09",
+        "n": 5,
+        "avg": 0.32,
+        "win": 40.0
+      },
+      {
+        "date": "2026-09-10",
+        "n": 5,
+        "avg": 3.36,
+        "win": 60.0
+      },
+      {
+        "date": "2026-09-11",
+        "n": 5,
+        "avg": 3.5,
+        "win": 60.0
+      },
+      {
+        "date": "2026-09-14",
+        "n": 5,
+        "avg": 3.97,
+        "win": 80.0
+      },
+      {
+        "date": "2026-09-15",
+        "n": 5,
+        "avg": 2.84,
+        "win": 60.0
+      },
+      {
+        "date": "2026-09-16",
+        "n": 5,
+        "avg": 3.03,
+        "win": 80.0
+      },
+      {
+        "date": "2026-09-17",
+        "n": 5,
+        "avg": 1.69,
+        "win": 60.0
+      },
+      {
+        "date": "2026-09-18",
+        "n": 5,
+        "avg": 5.53,
+        "win": 100.0
+      },
+      {
+        "date": "2026-09-21",
+        "n": 5,
+        "avg": 6.25,
+        "win": 100.0
+      }
+    ],
+    "details": {
+      "2026-09-01": [
+        {
+          "code": "601177",
+          "name": "杭齿前进",
+          "base": 137.4,
+          "open_pct": -0.8,
+          "comp": 152.4,
+          "mode": "DUAL_COND",
+          "buy": 13.69,
+          "ret": 3.94
+        },
+        {
+          "code": "002651",
+          "name": "利君股份",
+          "base": 131.0,
+          "open_pct": -0.59,
+          "comp": 146.0,
+          "mode": "DUAL_COND",
+          "buy": 8.45,
+          "ret": 14.2
+        },
+        {
+          "code": "002015",
+          "name": "协鑫能科",
+          "base": 130.6,
+          "open_pct": 0.0,
+          "comp": 145.6,
+          "mode": "DUAL_COND",
+          "buy": 15.84,
+          "ret": 11.99
+        },
+        {
+          "code": "002277",
+          "name": "友阿股份",
+          "base": 129.7,
+          "open_pct": -0.48,
+          "comp": 144.7,
+          "mode": "DUAL_COND",
+          "buy": 6.16,
+          "ret": 0.97
+        },
+        {
+          "code": "603333",
+          "name": "福华尚纬",
+          "base": 129.1,
+          "open_pct": -0.4,
+          "comp": 144.1,
+          "mode": "DUAL_COND",
+          "buy": 10.07,
+          "ret": 3.67
+        }
+      ],
+      "2026-09-02": [
+        {
+          "code": "002277",
+          "name": "友阿股份",
+          "base": 136.0,
+          "open_pct": -1.44,
+          "comp": 151.0,
+          "mode": "DUAL_COND",
+          "buy": 6.17,
+          "ret": 0.0
+        },
+        {
+          "code": "603121",
+          "name": "华培动力",
+          "base": 131.4,
+          "open_pct": -0.07,
+          "comp": 146.4,
+          "mode": "DUAL_COND",
+          "buy": 13.51,
+          "ret": 4.89
+        },
+        {
+          "code": "000695",
+          "name": "滨海能源",
+          "base": 129.1,
+          "open_pct": -0.6,
+          "comp": 144.1,
+          "mode": "DUAL_COND",
+          "buy": 14.88,
+          "ret": -0.47
+        },
+        {
+          "code": "600165",
+          "name": "宁科生物",
+          "base": 127.4,
+          "open_pct": 0.0,
+          "comp": 142.4,
+          "mode": "DUAL_COND",
+          "buy": 3.22,
+          "ret": 0.31
+        },
+        {
+          "code": "002445",
+          "name": "中南文化",
+          "base": 125.0,
+          "open_pct": -0.87,
+          "comp": 140.0,
+          "mode": "DUAL_COND",
+          "buy": 3.41,
+          "ret": -3.52
+        }
+      ],
+      "2026-09-03": [
+        {
+          "code": "000626",
+          "name": "远大控股",
+          "base": 132.7,
+          "open_pct": -0.56,
+          "comp": 147.7,
+          "mode": "DUAL_COND",
+          "buy": 8.92,
+          "ret": 8.52
+        },
+        {
+          "code": "002041",
+          "name": "登海种业",
+          "base": 129.9,
+          "open_pct": -1.93,
+          "comp": 144.9,
+          "mode": "DUAL_COND",
+          "buy": 10.66,
+          "ret": 6.0
+        },
+        {
+          "code": "600313",
+          "name": "农发种业",
+          "base": 129.1,
+          "open_pct": -0.84,
+          "comp": 144.1,
+          "mode": "DUAL_COND",
+          "buy": 7.07,
+          "ret": 6.08
+        },
+        {
+          "code": "000019",
+          "name": "深粮控股",
+          "base": 127.3,
+          "open_pct": -0.28,
+          "comp": 142.3,
+          "mode": "DUAL_COND",
+          "buy": 7.16,
+          "ret": 0.84
+        },
+        {
+          "code": "603135",
+          "name": "中重科技",
+          "base": 127.1,
+          "open_pct": 0.0,
+          "comp": 142.1,
+          "mode": "DUAL_COND",
+          "buy": 9.21,
+          "ret": 1.19
+        }
+      ],
+      "2026-09-04": [
+        {
+          "code": "000626",
+          "name": "远大控股",
+          "base": 134.2,
+          "open_pct": -0.22,
+          "comp": 149.2,
+          "mode": "DUAL_COND",
+          "buy": 8.98,
+          "ret": 11.14
+        },
+        {
+          "code": "603121",
+          "name": "华培动力",
+          "base": 138.4,
+          "open_pct": 0.07,
+          "comp": 148.4,
+          "mode": "DUAL_COND",
+          "buy": 13.65,
+          "ret": -0.22
+        },
+        {
+          "code": "000402",
+          "name": "金 融 街",
+          "base": 133.4,
+          "open_pct": -0.39,
+          "comp": 148.4,
+          "mode": "DUAL_COND",
+          "buy": 2.54,
+          "ret": 2.36
+        },
+        {
+          "code": "600313",
+          "name": "农发种业",
+          "base": 130.6,
+          "open_pct": -2.78,
+          "comp": 145.6,
+          "mode": "DUAL_COND",
+          "buy": 6.99,
+          "ret": 11.59
+        },
+        {
+          "code": "002949",
+          "name": "华阳国际",
+          "base": 130.0,
+          "open_pct": -0.78,
+          "comp": 145.0,
+          "mode": "DUAL_COND",
+          "buy": 12.69,
+          "ret": 14.89
+        }
+      ],
+      "2026-09-07": [
+        {
+          "code": "603139",
+          "name": "康惠股份",
+          "base": 132.8,
+          "open_pct": 0.0,
+          "comp": 147.8,
+          "mode": "DUAL_COND",
+          "buy": 36.56,
+          "ret": 4.21
+        },
+        {
+          "code": "000402",
+          "name": "金 融 街",
+          "base": 131.0,
+          "open_pct": -0.77,
+          "comp": 146.0,
+          "mode": "DUAL_COND",
+          "buy": 2.58,
+          "ret": 3.1
+        },
+        {
+          "code": "600758",
+          "name": "辽宁能源",
+          "base": 128.7,
+          "open_pct": -0.27,
+          "comp": 143.7,
+          "mode": "DUAL_COND",
+          "buy": 3.66,
+          "ret": 4.1
+        },
+        {
+          "code": "002875",
+          "name": "安奈儿",
+          "base": 133.6,
+          "open_pct": 0.88,
+          "comp": 143.6,
+          "mode": "DUAL_COND",
+          "buy": 13.74,
+          "ret": 1.53
+        },
+        {
+          "code": "002107",
+          "name": "沃华医药",
+          "base": 128.6,
+          "open_pct": -0.59,
+          "comp": 143.6,
+          "mode": "DUAL_COND",
+          "buy": 6.78,
+          "ret": 8.55
+        }
+      ],
+      "2026-09-08": [
+        {
+          "code": "000402",
+          "name": "金 融 街",
+          "base": 134.4,
+          "open_pct": -0.39,
+          "comp": 149.4,
+          "mode": "DUAL_COND",
+          "buy": 2.57,
+          "ret": 2.33
+        },
+        {
+          "code": "000736",
+          "name": "中交发展",
+          "base": 130.4,
+          "open_pct": -0.21,
+          "comp": 145.4,
+          "mode": "DUAL_COND",
+          "buy": 4.7,
+          "ret": 3.4
+        },
+        {
+          "code": "000567",
+          "name": "海德股份",
+          "base": 129.5,
+          "open_pct": 0.0,
+          "comp": 144.5,
+          "mode": "DUAL_COND",
+          "buy": 6.69,
+          "ret": 2.39
+        },
+        {
+          "code": "002107",
+          "name": "沃华医药",
+          "base": 129.0,
+          "open_pct": -0.58,
+          "comp": 144.0,
+          "mode": "DUAL_COND",
+          "buy": 6.8,
+          "ret": 9.26
+        },
+        {
+          "code": "002915",
+          "name": "中欣氟材",
+          "base": 133.9,
+          "open_pct": 0.28,
+          "comp": 143.9,
+          "mode": "DUAL_COND",
+          "buy": 18.1,
+          "ret": 4.48
+        }
+      ],
+      "2026-09-09": [
+        {
+          "code": "002104",
+          "name": "恒宝股份",
+          "base": 132.4,
+          "open_pct": -1.51,
+          "comp": 147.4,
+          "mode": "DUAL_COND",
+          "buy": 13.08,
+          "ret": -2.75
+        },
+        {
+          "code": "600671",
+          "name": "天目药业",
+          "base": 128.3,
+          "open_pct": -0.18,
+          "comp": 143.3,
+          "mode": "DUAL_COND",
+          "buy": 21.76,
+          "ret": 6.34
+        },
+        {
+          "code": "600551",
+          "name": "时代出版",
+          "base": 128.2,
+          "open_pct": -1.21,
+          "comp": 143.2,
+          "mode": "DUAL_COND",
+          "buy": 8.15,
+          "ret": -2.21
+        },
+        {
+          "code": "002190",
+          "name": "成飞集成",
+          "base": 127.4,
+          "open_pct": -0.72,
+          "comp": 142.4,
+          "mode": "DUAL_COND",
+          "buy": 26.05,
+          "ret": 1.73
+        },
+        {
+          "code": "000402",
+          "name": "金 融 街",
+          "base": 125.9,
+          "open_pct": -0.76,
+          "comp": 140.9,
+          "mode": "DUAL_COND",
+          "buy": 2.62,
+          "ret": -1.53
+        }
+      ],
+      "2026-09-10": [
+        {
+          "code": "603598",
+          "name": "引力传媒",
+          "base": 132.9,
+          "open_pct": -1.16,
+          "comp": 147.9,
+          "mode": "DUAL_COND",
+          "buy": 17.86,
+          "ret": 0.17
+        },
+        {
+          "code": "002104",
+          "name": "恒宝股份",
+          "base": 131.1,
+          "open_pct": -2.17,
+          "comp": 146.1,
+          "mode": "DUAL_COND",
+          "buy": 12.6,
+          "ret": -3.02
+        },
+        {
+          "code": "002882",
+          "name": "金龙羽",
+          "base": 129.8,
+          "open_pct": -0.83,
+          "comp": 144.8,
+          "mode": "DUAL_COND",
+          "buy": 23.8,
+          "ret": -5.97
+        },
+        {
+          "code": "601606",
+          "name": "长城军工",
+          "base": 129.4,
+          "open_pct": 0.0,
+          "comp": 144.4,
+          "mode": "DUAL_COND",
+          "buy": 35.46,
+          "ret": 4.31
+        },
+        {
+          "code": "002201",
+          "name": "九鼎新材",
+          "base": 129.2,
+          "open_pct": -0.22,
+          "comp": 144.2,
+          "mode": "DUAL_COND",
+          "buy": 9.14,
+          "ret": 21.33
+        }
+      ],
+      "2026-09-11": [
+        {
+          "code": "601606",
+          "name": "长城军工",
+          "base": 135.2,
+          "open_pct": -1.42,
+          "comp": 150.2,
+          "mode": "DUAL_COND",
+          "buy": 34.0,
+          "ret": 8.76
+        },
+        {
+          "code": "603778",
+          "name": "国晟科技",
+          "base": 133.7,
+          "open_pct": -0.38,
+          "comp": 148.7,
+          "mode": "DUAL_COND",
+          "buy": 10.38,
+          "ret": -3.08
+        },
+        {
+          "code": "603390",
+          "name": "通达电气",
+          "base": 133.0,
+          "open_pct": -1.32,
+          "comp": 148.0,
+          "mode": "DUAL_COND",
+          "buy": 10.49,
+          "ret": 10.01
+        },
+        {
+          "code": "002639",
+          "name": "雪人集团",
+          "base": 130.0,
+          "open_pct": -2.7,
+          "comp": 145.0,
+          "mode": "DUAL_COND",
+          "buy": 13.33,
+          "ret": -0.6
+        },
+        {
+          "code": "000700",
+          "name": "模塑科技",
+          "base": 129.0,
+          "open_pct": -0.94,
+          "comp": 144.0,
+          "mode": "DUAL_COND",
+          "buy": 11.6,
+          "ret": 2.41
+        }
+      ],
+      "2026-09-14": [
+        {
+          "code": "603138",
+          "name": "海量数据",
+          "base": 129.0,
+          "open_pct": -1.84,
+          "comp": 144.0,
+          "mode": "DUAL_COND",
+          "buy": 14.44,
+          "ret": 7.27
+        },
+        {
+          "code": "000592",
+          "name": "平潭发展",
+          "base": 128.5,
+          "open_pct": -0.52,
+          "comp": 143.5,
+          "mode": "DUAL_COND",
+          "buy": 7.71,
+          "ret": 8.82
+        },
+        {
+          "code": "002798",
+          "name": "帝欧水华",
+          "base": 133.1,
+          "open_pct": 0.15,
+          "comp": 143.1,
+          "mode": "DUAL_COND",
+          "buy": 6.69,
+          "ret": 1.35
+        },
+        {
+          "code": "002300",
+          "name": "太阳电缆",
+          "base": 127.2,
+          "open_pct": 0.0,
+          "comp": 142.2,
+          "mode": "DUAL_COND",
+          "buy": 8.16,
+          "ret": -2.57
+        },
+        {
+          "code": "000735",
+          "name": "罗 牛 山",
+          "base": 125.8,
+          "open_pct": -0.32,
+          "comp": 140.8,
+          "mode": "DUAL_COND",
+          "buy": 6.25,
+          "ret": 4.96
+        }
+      ],
+      "2026-09-15": [
+        {
+          "code": "000592",
+          "name": "平潭发展",
+          "base": 129.2,
+          "open_pct": -2.84,
+          "comp": 144.2,
+          "mode": "DUAL_COND",
+          "buy": 7.87,
+          "ret": 10.67
+        },
+        {
+          "code": "600400",
+          "name": "红豆股份",
+          "base": 126.3,
+          "open_pct": 0.0,
+          "comp": 141.3,
+          "mode": "DUAL_COND",
+          "buy": 3.1,
+          "ret": 3.87
+        },
+        {
+          "code": "000565",
+          "name": "渝三峡Ａ",
+          "base": 123.8,
+          "open_pct": 0.0,
+          "comp": 138.8,
+          "mode": "DUAL_COND",
+          "buy": 6.93,
+          "ret": -4.33
+        },
+        {
+          "code": "603313",
+          "name": "梦百合",
+          "base": 123.5,
+          "open_pct": 0.0,
+          "comp": 138.5,
+          "mode": "DUAL_COND",
+          "buy": 6.73,
+          "ret": 0.0
+        },
+        {
+          "code": "002062",
+          "name": "宏润建设",
+          "base": 122.5,
+          "open_pct": 0.0,
+          "comp": 137.5,
+          "mode": "DUAL_COND",
+          "buy": 8.78,
+          "ret": 3.99
+        }
+      ],
+      "2026-09-16": [
+        {
+          "code": "600400",
+          "name": "红豆股份",
+          "base": 131.3,
+          "open_pct": 0.0,
+          "comp": 146.3,
+          "mode": "DUAL_COND",
+          "buy": 3.1,
+          "ret": 8.39
+        },
+        {
+          "code": "000839",
+          "name": "国安股份",
+          "base": 124.4,
+          "open_pct": -3.09,
+          "comp": 139.4,
+          "mode": "DUAL_COND",
+          "buy": 2.82,
+          "ret": -1.42
+        },
+        {
+          "code": "600770",
+          "name": "综艺股份",
+          "base": 129.3,
+          "open_pct": 0.72,
+          "comp": 139.3,
+          "mode": "DUAL_COND",
+          "buy": 5.6,
+          "ret": 3.93
+        },
+        {
+          "code": "002652",
+          "name": "扬子新材",
+          "base": 123.0,
+          "open_pct": -0.22,
+          "comp": 138.0,
+          "mode": "DUAL_COND",
+          "buy": 4.55,
+          "ret": 3.52
+        },
+        {
+          "code": "603390",
+          "name": "通达电气",
+          "base": 127.9,
+          "open_pct": 0.54,
+          "comp": 137.9,
+          "mode": "DUAL_COND",
+          "buy": 11.14,
+          "ret": 0.72
+        }
+      ],
+      "2026-09-17": [
+        {
+          "code": "600032",
+          "name": "浙江新能",
+          "base": 131.0,
+          "open_pct": -0.69,
+          "comp": 146.0,
+          "mode": "DUAL_COND",
+          "buy": 7.16,
+          "ret": 0.42
+        },
+        {
+          "code": "002735",
+          "name": "王子新材",
+          "base": 130.6,
+          "open_pct": -1.76,
+          "comp": 145.6,
+          "mode": "DUAL_COND",
+          "buy": 12.25,
+          "ret": 8.33
+        },
+        {
+          "code": "002652",
+          "name": "扬子新材",
+          "base": 133.4,
+          "open_pct": 0.43,
+          "comp": 143.4,
+          "mode": "DUAL_COND",
+          "buy": 4.7,
+          "ret": 0.0
+        },
+        {
+          "code": "002297",
+          "name": "博云新材",
+          "base": 127.5,
+          "open_pct": -0.99,
+          "comp": 142.5,
+          "mode": "DUAL_COND",
+          "buy": 22.08,
+          "ret": 1.4
+        },
+        {
+          "code": "600596",
+          "name": "新安股份",
+          "base": 127.2,
+          "open_pct": -0.24,
+          "comp": 142.2,
+          "mode": "DUAL_COND",
+          "buy": 12.31,
+          "ret": -1.71
+        }
+      ],
+      "2026-09-18": [
+        {
+          "code": "603336",
+          "name": "宏辉果蔬",
+          "base": 135.0,
+          "open_pct": -1.9,
+          "comp": 150.0,
+          "mode": "DUAL_COND",
+          "buy": 9.81,
+          "ret": 11.11
+        },
+        {
+          "code": "002242",
+          "name": "九阳股份",
+          "base": 127.0,
+          "open_pct": -2.09,
+          "comp": 142.0,
+          "mode": "DUAL_COND",
+          "buy": 9.35,
+          "ret": 1.93
+        },
+        {
+          "code": "600644",
+          "name": "乐山电力",
+          "base": 126.4,
+          "open_pct": -1.02,
+          "comp": 141.4,
+          "mode": "DUAL_COND",
+          "buy": 9.71,
+          "ret": 3.6
+        },
+        {
+          "code": "600343",
+          "name": "航天动力",
+          "base": 130.6,
+          "open_pct": 0.76,
+          "comp": 140.6,
+          "mode": "DUAL_COND",
+          "buy": 19.85,
+          "ret": 8.46
+        },
+        {
+          "code": "600982",
+          "name": "宁波能源",
+          "base": 123.5,
+          "open_pct": 0.0,
+          "comp": 138.5,
+          "mode": "DUAL_COND",
+          "buy": 5.1,
+          "ret": 2.55
+        }
+      ],
+      "2026-09-21": [
+        {
+          "code": "603336",
+          "name": "宏辉果蔬",
+          "base": 131.4,
+          "open_pct": -0.58,
+          "comp": 146.4,
+          "mode": "DUAL_COND",
+          "buy": 10.3,
+          "ret": 8.35
+        },
+        {
+          "code": "600644",
+          "name": "乐山电力",
+          "base": 131.2,
+          "open_pct": -0.82,
+          "comp": 146.2,
+          "mode": "DUAL_COND",
+          "buy": 9.7,
+          "ret": 2.89
+        },
+        {
+          "code": "600792",
+          "name": "云煤能源",
+          "base": 129.6,
+          "open_pct": -1.89,
+          "comp": 144.6,
+          "mode": "DUAL_COND",
+          "buy": 5.2,
+          "ret": 15.58
+        },
+        {
+          "code": "002242",
+          "name": "九阳股份",
+          "base": 129.2,
+          "open_pct": -0.32,
+          "comp": 144.2,
+          "mode": "DUAL_COND",
+          "buy": 9.4,
+          "ret": 2.98
+        },
+        {
+          "code": "002362",
+          "name": "汉王科技",
+          "base": 124.6,
+          "open_pct": 0.0,
+          "comp": 139.6,
+          "mode": "DUAL_COND",
+          "buy": 16.55,
+          "ret": 1.45
+        }
+      ]
+    }
+  },
+  "B": {
+    "stat": {
+      "n": 75,
+      "avg": 3.21,
+      "med": 2.02,
+      "win": 70.7,
+      "max": 17.62,
+      "min": -6.57
+    },
+    "daily": [
+      {
+        "date": "2026-09-01",
+        "n": 5,
+        "avg": 5.59,
+        "win": 80.0
+      },
+      {
+        "date": "2026-09-02",
+        "n": 5,
+        "avg": 1.35,
+        "win": 60.0
+      },
+      {
+        "date": "2026-09-03",
+        "n": 5,
+        "avg": 3.83,
+        "win": 60.0
+      },
+      {
+        "date": "2026-09-04",
+        "n": 5,
+        "avg": 0.51,
+        "win": 80.0
+      },
+      {
+        "date": "2026-09-07",
+        "n": 5,
+        "avg": 5.31,
+        "win": 80.0
+      },
+      {
+        "date": "2026-09-08",
+        "n": 5,
+        "avg": 0.93,
+        "win": 60.0
+      },
+      {
+        "date": "2026-09-09",
+        "n": 5,
+        "avg": 2.33,
+        "win": 60.0
+      },
+      {
+        "date": "2026-09-10",
+        "n": 5,
+        "avg": 3.5,
+        "win": 80.0
+      },
+      {
+        "date": "2026-09-11",
+        "n": 5,
+        "avg": -0.45,
+        "win": 40.0
+      },
+      {
+        "date": "2026-09-14",
+        "n": 5,
+        "avg": 5.94,
+        "win": 80.0
+      },
+      {
+        "date": "2026-09-15",
+        "n": 5,
+        "avg": 1.11,
+        "win": 40.0
+      },
+      {
+        "date": "2026-09-16",
+        "n": 5,
+        "avg": 1.6,
+        "win": 60.0
+      },
+      {
+        "date": "2026-09-17",
+        "n": 5,
+        "avg": 4.71,
+        "win": 100.0
+      },
+      {
+        "date": "2026-09-18",
+        "n": 5,
+        "avg": 7.02,
+        "win": 100.0
+      },
+      {
+        "date": "2026-09-21",
+        "n": 5,
+        "avg": 4.94,
+        "win": 80.0
+      }
+    ],
+    "details": {
+      "2026-09-01": [
+        {
+          "code": "002886",
+          "name": "沃特股份",
+          "base": 152.0,
+          "open_pct": -0.72,
+          "comp": 167.0,
+          "mode": "BULL",
+          "buy": 28.83,
+          "ret": 6.97
+        },
+        {
+          "code": "002396",
+          "name": "星网锐捷",
+          "base": 146.0,
+          "open_pct": -0.5,
+          "comp": 161.0,
+          "mode": "BULL",
+          "buy": 40.16,
+          "ret": 4.46
+        },
+        {
+          "code": "600246",
+          "name": "万通发展",
+          "base": 144.5,
+          "open_pct": 1.28,
+          "comp": 149.5,
+          "mode": "BULL",
+          "buy": 13.5,
+          "ret": -1.7
+        },
+        {
+          "code": "603269",
+          "name": "海鸥股份",
+          "base": 152.0,
+          "open_pct": 5.98,
+          "comp": 144.0,
+          "mode": "LOCAL_BULL",
+          "buy": 25.86,
+          "ret": 6.26
+        },
+        {
+          "code": "002855",
+          "name": "捷荣技术",
+          "base": 152.0,
+          "open_pct": 8.07,
+          "comp": 137.0,
+          "mode": "BULL",
+          "buy": 17.4,
+          "ret": 11.95
+        }
+      ],
+      "2026-09-02": [
+        {
+          "code": "000560",
+          "name": "我爱我家",
+          "base": 152.0,
+          "open_pct": -3.13,
+          "comp": 167.0,
+          "mode": "LOCAL_BULL",
+          "buy": 3.09,
+          "ret": 0.65
+        },
+        {
+          "code": "002882",
+          "name": "金龙羽",
+          "base": 146.0,
+          "open_pct": -1.01,
+          "comp": 161.0,
+          "mode": "BULL",
+          "buy": 23.53,
+          "ret": 4.21
+        },
+        {
+          "code": "600551",
+          "name": "时代出版",
+          "base": 143.6,
+          "open_pct": -0.88,
+          "comp": 158.6,
+          "mode": "BULL",
+          "buy": 9.0,
+          "ret": -1.33
+        },
+        {
+          "code": "603123",
+          "name": "翠微股份",
+          "base": 143.0,
+          "open_pct": -1.53,
+          "comp": 158.0,
+          "mode": "BULL",
+          "buy": 10.28,
+          "ret": 3.21
+        },
+        {
+          "code": "600371",
+          "name": "万向德农",
+          "base": 149.4,
+          "open_pct": 1.72,
+          "comp": 154.4,
+          "mode": "BULL",
+          "buy": 14.2,
+          "ret": 0.0
+        }
+      ],
+      "2026-09-03": [
+        {
+          "code": "002104",
+          "name": "恒宝股份",
+          "base": 138.5,
+          "open_pct": -0.96,
+          "comp": 153.5,
+          "mode": "BULL",
+          "buy": 13.38,
+          "ret": 7.32
+        },
+        {
+          "code": "603221",
+          "name": "爱丽家居",
+          "base": 137.0,
+          "open_pct": -10.01,
+          "comp": 152.0,
+          "mode": "BULL",
+          "buy": 30.03,
+          "ret": -0.2
+        },
+        {
+          "code": "601606",
+          "name": "长城军工",
+          "base": 134.8,
+          "open_pct": -0.98,
+          "comp": 149.8,
+          "mode": "BULL",
+          "buy": 36.26,
+          "ret": -1.21
+        },
+        {
+          "code": "002297",
+          "name": "博云新材",
+          "base": 143.0,
+          "open_pct": 3.5,
+          "comp": 143.0,
+          "mode": "LOCAL_BULL",
+          "buy": 20.7,
+          "ret": 10.39
+        },
+        {
+          "code": "603618",
+          "name": "杭电股份",
+          "base": 137.0,
+          "open_pct": 3.17,
+          "comp": 137.0,
+          "mode": "BULL",
+          "buy": 38.4,
+          "ret": 2.86
+        }
+      ],
+      "2026-09-04": [
+        {
+          "code": "600869",
+          "name": "远东股份",
+          "base": 141.5,
+          "open_pct": 0.0,
+          "comp": 156.5,
+          "mode": "LOCAL_BULL",
+          "buy": 21.05,
+          "ret": 0.29
+        },
+        {
+          "code": "600892",
+          "name": "大晟文化",
+          "base": 137.0,
+          "open_pct": -9.91,
+          "comp": 152.0,
+          "mode": "BULL",
+          "buy": 4.91,
+          "ret": 3.26
+        },
+        {
+          "code": "603989",
+          "name": "艾华集团",
+          "base": 136.8,
+          "open_pct": 0.47,
+          "comp": 146.8,
+          "mode": "BULL",
+          "buy": 32.18,
+          "ret": 2.02
+        },
+        {
+          "code": "603538",
+          "name": "美诺华",
+          "base": 138.0,
+          "open_pct": 1.79,
+          "comp": 143.0,
+          "mode": "BULL",
+          "buy": 29.0,
+          "ret": -4.14
+        },
+        {
+          "code": "000887",
+          "name": "中鼎股份",
+          "base": 95.7,
+          "open_pct": 0.75,
+          "comp": 105.7,
+          "mode": "CORRECTION",
+          "buy": 21.6,
+          "ret": 1.11
+        }
+      ],
+      "2026-09-07": [
+        {
+          "code": "000560",
+          "name": "我爱我家",
+          "base": 135.0,
+          "open_pct": -1.27,
+          "comp": 150.0,
+          "mode": "BULL",
+          "buy": 3.11,
+          "ret": 10.61
+        },
+        {
+          "code": "002124",
+          "name": "天邦食品",
+          "base": 143.0,
+          "open_pct": 7.44,
+          "comp": 128.0,
+          "mode": "LOCAL_BULL",
+          "buy": 2.6,
+          "ret": 0.38
+        },
+        {
+          "code": "002403",
+          "name": "爱仕达",
+          "base": 130.2,
+          "open_pct": 9.04,
+          "comp": 115.19999999999999,
+          "mode": "BULL",
+          "buy": 12.3,
+          "ret": 10.98
+        },
+        {
+          "code": "600192",
+          "name": "长城电工",
+          "base": 88.3,
+          "open_pct": -0.14,
+          "comp": 103.3,
+          "mode": "CORRECTION",
+          "buy": 7.26,
+          "ret": -0.83
+        },
+        {
+          "code": "002329",
+          "name": "皇氏集团",
+          "base": 84.1,
+          "open_pct": 0.0,
+          "comp": 99.1,
+          "mode": "CORRECTION",
+          "buy": 3.89,
+          "ret": 5.4
+        }
+      ],
+      "2026-09-08": [
+        {
+          "code": "603311",
+          "name": "金海高科",
+          "base": 147.0,
+          "open_pct": -0.03,
+          "comp": 162.0,
+          "mode": "BULL",
+          "buy": 29.36,
+          "ret": -4.67
+        },
+        {
+          "code": "600540",
+          "name": "新赛股份",
+          "base": 145.7,
+          "open_pct": 1.49,
+          "comp": 150.7,
+          "mode": "BULL",
+          "buy": 6.82,
+          "ret": 5.72
+        },
+        {
+          "code": "600371",
+          "name": "万向德农",
+          "base": 140.9,
+          "open_pct": 1.99,
+          "comp": 145.9,
+          "mode": "BULL",
+          "buy": 15.37,
+          "ret": 4.75
+        },
+        {
+          "code": "000823",
+          "name": "超声电子",
+          "base": 140.0,
+          "open_pct": 8.09,
+          "comp": 125.0,
+          "mode": "BULL",
+          "buy": 17.23,
+          "ret": 0.35
+        },
+        {
+          "code": "002056",
+          "name": "横店东磁",
+          "base": 91.2,
+          "open_pct": -0.78,
+          "comp": 106.2,
+          "mode": "CORRECTION",
+          "buy": 20.45,
+          "ret": -1.52
+        }
+      ],
+      "2026-09-09": [
+        {
+          "code": "601595",
+          "name": "上海电影",
+          "base": 138.5,
+          "open_pct": -0.4,
+          "comp": 153.5,
+          "mode": "BULL",
+          "buy": 22.6,
+          "ret": 2.08
+        },
+        {
+          "code": "600596",
+          "name": "新安股份",
+          "base": 138.5,
+          "open_pct": 1.49,
+          "comp": 143.5,
+          "mode": "BULL",
+          "buy": 12.26,
+          "ret": 1.79
+        },
+        {
+          "code": "600330",
+          "name": "天通股份",
+          "base": 138.5,
+          "open_pct": 1.26,
+          "comp": 143.5,
+          "mode": "BULL",
+          "buy": 30.46,
+          "ret": -3.64
+        },
+        {
+          "code": "002909",
+          "name": "集泰股份",
+          "base": 141.5,
+          "open_pct": 3.1,
+          "comp": 141.5,
+          "mode": "BULL",
+          "buy": 8.99,
+          "ret": -2.56
+        },
+        {
+          "code": "002068",
+          "name": "黑猫股份",
+          "base": 142.5,
+          "open_pct": 6.04,
+          "comp": 134.5,
+          "mode": "LOCAL_BULL",
+          "buy": 9.65,
+          "ret": 13.99
+        }
+      ],
+      "2026-09-10": [
+        {
+          "code": "600354",
+          "name": "敦煌种业",
+          "base": 141.5,
+          "open_pct": -1.55,
+          "comp": 156.5,
+          "mode": "BULL",
+          "buy": 10.81,
+          "ret": 13.97
+        },
+        {
+          "code": "000759",
+          "name": "中百集团",
+          "base": 151.7,
+          "open_pct": 5.67,
+          "comp": 143.7,
+          "mode": "LOCAL_BULL",
+          "buy": 8.95,
+          "ret": 6.82
+        },
+        {
+          "code": "600865",
+          "name": "百大集团",
+          "base": 151.5,
+          "open_pct": 8.8,
+          "comp": 136.5,
+          "mode": "BULL",
+          "buy": 16.44,
+          "ret": -6.57
+        },
+        {
+          "code": "600403",
+          "name": "大有能源",
+          "base": 140.0,
+          "open_pct": 5.88,
+          "comp": 132.0,
+          "mode": "BULL",
+          "buy": 7.92,
+          "ret": 0.13
+        },
+        {
+          "code": "600192",
+          "name": "长城电工",
+          "base": 138.5,
+          "open_pct": 4.82,
+          "comp": 130.5,
+          "mode": "BULL",
+          "buy": 8.27,
+          "ret": 3.14
+        }
+      ],
+      "2026-09-11": [
+        {
+          "code": "600192",
+          "name": "长城电工",
+          "base": 138.5,
+          "open_pct": -1.96,
+          "comp": 153.5,
+          "mode": "BULL",
+          "buy": 8.51,
+          "ret": -2.7
+        },
+        {
+          "code": "600644",
+          "name": "乐山电力",
+          "base": 138.5,
+          "open_pct": -1.19,
+          "comp": 153.5,
+          "mode": "BULL",
+          "buy": 10.0,
+          "ret": 5.6
+        },
+        {
+          "code": "603318",
+          "name": "水发燃气",
+          "base": 158.4,
+          "open_pct": 6.28,
+          "comp": 150.4,
+          "mode": "LOCAL_BULL",
+          "buy": 11.0,
+          "ret": -6.45
+        },
+        {
+          "code": "600744",
+          "name": "华银电力",
+          "base": 144.5,
+          "open_pct": 2.29,
+          "comp": 149.5,
+          "mode": "BULL",
+          "buy": 7.16,
+          "ret": 1.96
+        },
+        {
+          "code": "001299",
+          "name": "美能能源",
+          "base": 140.7,
+          "open_pct": 2.03,
+          "comp": 145.7,
+          "mode": "BULL",
+          "buy": 12.07,
+          "ret": -0.66
+        }
+      ],
+      "2026-09-14": [
+        {
+          "code": "603421",
+          "name": "鼎信通讯",
+          "base": 152.0,
+          "open_pct": -2.49,
+          "comp": 167.0,
+          "mode": "BULL",
+          "buy": 7.82,
+          "ret": 1.28
+        },
+        {
+          "code": "002201",
+          "name": "九鼎新材",
+          "base": 146.8,
+          "open_pct": -5.23,
+          "comp": 161.8,
+          "mode": "BULL",
+          "buy": 10.51,
+          "ret": 8.94
+        },
+        {
+          "code": "603336",
+          "name": "宏辉果蔬",
+          "base": 141.0,
+          "open_pct": 3.57,
+          "comp": 141.0,
+          "mode": "BULL",
+          "buy": 10.45,
+          "ret": -0.48
+        },
+        {
+          "code": "002585",
+          "name": "双星新材",
+          "base": 153.5,
+          "open_pct": 7.63,
+          "comp": 138.5,
+          "mode": "LOCAL_BULL",
+          "buy": 10.72,
+          "ret": 12.5
+        },
+        {
+          "code": "002560",
+          "name": "通达股份",
+          "base": 143.0,
+          "open_pct": 9.01,
+          "comp": 128.0,
+          "mode": "BULL",
+          "buy": 7.5,
+          "ret": 7.47
+        }
+      ],
+      "2026-09-15": [
+        {
+          "code": "600876",
+          "name": "凯盛新能",
+          "base": 144.3,
+          "open_pct": -3.34,
+          "comp": 159.3,
+          "mode": "LOCAL_BULL",
+          "buy": 9.25,
+          "ret": -3.35
+        },
+        {
+          "code": "002141",
+          "name": "贤丰控股",
+          "base": 138.5,
+          "open_pct": 0.0,
+          "comp": 153.5,
+          "mode": "BULL",
+          "buy": 6.97,
+          "ret": -3.01
+        },
+        {
+          "code": "600172",
+          "name": "黄河旋风",
+          "base": 139.8,
+          "open_pct": 0.3,
+          "comp": 149.8,
+          "mode": "BULL",
+          "buy": 16.58,
+          "ret": 1.69
+        },
+        {
+          "code": "001896",
+          "name": "豫能控股",
+          "base": 137.0,
+          "open_pct": 3.54,
+          "comp": 137.0,
+          "mode": "BULL",
+          "buy": 13.45,
+          "ret": -5.06
+        },
+        {
+          "code": "000993",
+          "name": "闽东电力",
+          "base": 141.5,
+          "open_pct": 4.98,
+          "comp": 133.5,
+          "mode": "BULL",
+          "buy": 16.03,
+          "ret": 15.28
+        }
+      ],
+      "2026-09-16": [
+        {
+          "code": "002585",
+          "name": "双星新材",
+          "base": 146.0,
+          "open_pct": 0.0,
+          "comp": 161.0,
+          "mode": "BULL",
+          "buy": 12.06,
+          "ret": -0.17
+        },
+        {
+          "code": "000993",
+          "name": "闽东电力",
+          "base": 152.0,
+          "open_pct": 2.5,
+          "comp": 157.0,
+          "mode": "LOCAL_BULL",
+          "buy": 17.22,
+          "ret": 7.26
+        },
+        {
+          "code": "001223",
+          "name": "欧克科技",
+          "base": 134.2,
+          "open_pct": 0.0,
+          "comp": 149.2,
+          "mode": "BULL",
+          "buy": 46.11,
+          "ret": -2.43
+        },
+        {
+          "code": "002522",
+          "name": "浙江众成",
+          "base": 138.5,
+          "open_pct": 0.86,
+          "comp": 148.5,
+          "mode": "BULL",
+          "buy": 5.86,
+          "ret": 2.05
+        },
+        {
+          "code": "002298",
+          "name": "中电鑫龙",
+          "base": 96.5,
+          "open_pct": -2.33,
+          "comp": 111.5,
+          "mode": "CORRECTION",
+          "buy": 8.37,
+          "ret": 1.31
+        }
+      ],
+      "2026-09-17": [
+        {
+          "code": "603956",
+          "name": "威派格",
+          "base": 149.0,
+          "open_pct": -1.29,
+          "comp": 164.0,
+          "mode": "LOCAL_BULL",
+          "buy": 6.9,
+          "ret": 4.35
+        },
+        {
+          "code": "000720",
+          "name": "新能泰山",
+          "base": 146.8,
+          "open_pct": -2.88,
+          "comp": 161.8,
+          "mode": "BULL",
+          "buy": 4.05,
+          "ret": 1.48
+        },
+        {
+          "code": "002396",
+          "name": "星网锐捷",
+          "base": 143.0,
+          "open_pct": -3.04,
+          "comp": 158.0,
+          "mode": "BULL",
+          "buy": 37.65,
+          "ret": 5.87
+        },
+        {
+          "code": "600793",
+          "name": "宜宾纸业",
+          "base": 142.8,
+          "open_pct": -0.73,
+          "comp": 157.8,
+          "mode": "BULL",
+          "buy": 16.24,
+          "ret": 7.94
+        },
+        {
+          "code": "002137",
+          "name": "实益达",
+          "base": 143.0,
+          "open_pct": 3.41,
+          "comp": 143.0,
+          "mode": "BULL",
+          "buy": 8.48,
+          "ret": 3.89
+        }
+      ],
+      "2026-09-18": [
+        {
+          "code": "000980",
+          "name": "众泰汽车",
+          "base": 143.0,
+          "open_pct": -4.64,
+          "comp": 158.0,
+          "mode": "LOCAL_BULL",
+          "buy": 2.26,
+          "ret": 0.88
+        },
+        {
+          "code": "001365",
+          "name": "天海电子",
+          "base": 143.0,
+          "open_pct": 0.0,
+          "comp": 158.0,
+          "mode": "BULL",
+          "buy": 37.51,
+          "ret": 1.47
+        },
+        {
+          "code": "002796",
+          "name": "世嘉科技",
+          "base": 142.3,
+          "open_pct": -0.98,
+          "comp": 157.3,
+          "mode": "BULL",
+          "buy": 32.22,
+          "ret": 1.15
+        },
+        {
+          "code": "600371",
+          "name": "万向德农",
+          "base": 138.9,
+          "open_pct": -8.57,
+          "comp": 153.9,
+          "mode": "BULL",
+          "buy": 14.3,
+          "ret": 17.62
+        },
+        {
+          "code": "600630",
+          "name": "龙头股份",
+          "base": 131.0,
+          "open_pct": 6.1,
+          "comp": 123.0,
+          "mode": "BULL",
+          "buy": 8.0,
+          "ret": 14.0
+        }
+      ],
+      "2026-09-21": [
+        {
+          "code": "002971",
+          "name": "和远气体",
+          "base": 149.0,
+          "open_pct": -1.41,
+          "comp": 164.0,
+          "mode": "LOCAL_BULL",
+          "buy": 42.08,
+          "ret": -0.31
+        },
+        {
+          "code": "603118",
+          "name": "共进股份",
+          "base": 146.0,
+          "open_pct": -0.43,
+          "comp": 161.0,
+          "mode": "BULL",
+          "buy": 18.35,
+          "ret": 3.16
+        },
+        {
+          "code": "603626",
+          "name": "科森科技",
+          "base": 143.0,
+          "open_pct": -1.58,
+          "comp": 158.0,
+          "mode": "BULL",
+          "buy": 23.05,
+          "ret": 4.47
+        },
+        {
+          "code": "600127",
+          "name": "金健米业",
+          "base": 146.0,
+          "open_pct": 1.26,
+          "comp": 151.0,
+          "mode": "BULL",
+          "buy": 14.5,
+          "ret": 14.14
+        },
+        {
+          "code": "603375",
+          "name": "盛景微",
+          "base": 146.0,
+          "open_pct": 2.55,
+          "comp": 146.0,
+          "mode": "BULL",
+          "buy": 53.01,
+          "ret": 3.24
+        }
+      ]
+    }
+  }
+}
