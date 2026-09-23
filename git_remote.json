@@ -1,0 +1,17 @@
+{
+  "name": "主板两阶段选股系统 - GitHub 调用地址",
+  "repository_url": "https://github.com/godsavethekingx-cloud/stock-v1224-two-stage-mainboard.git",
+  "browser_url": "https://github.com/godsavethekingx-cloud/stock-v1224-two-stage-mainboard",
+  "owner": "godsavethekingx-cloud",
+  "repo": "stock-v1224-two-stage-mainboard",
+  "branch": "main",
+  "auth_note": "HTTPS 匿名只读(fetch/clone)；push 需 GitHub PAT 写权限 token，token 不落盘、一次性传入",
+  "usage": {
+    "clone": "git clone https://github.com/godsavethekingx-cloud/stock-v1224-two-stage-mainboard.git",
+    "fetch": "git fetch origin",
+    "push_with_pat": "git push https://x-access-token:<TOKEN>@github.com/godsavethekingx-cloud/stock-v1224-two-stage-mainboard.git main"
+  },
+  "last_synced": "2026-09-23",
+  "last_pushed_commit": "4ab5386",
+  "notes": "阶段1/阶段2日报脚本与 run_auto.sh 统一入口已入库，防下次运行缺文件。night20_latest.json 为阶段1输出样例，git 同步时不被覆盖。"
+}

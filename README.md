@@ -104,6 +104,13 @@ python3 generate_v9_report.py
 - 阶段1依赖核心引擎 `scan_v1224.py` + 数据 `sector_mapping.json`，路径统一在 `/workspace/stock-v1224/system`。
 - 口径经回测选定：**全量 BULL 用户模式 + DUAL_COND 优先**（对比 RANGE_BULL，最近15个交易日胜率与收益均占优）。
 
+### GitHub 调用地址（同步用）
+- 仓库 URL（HTTPS，匿名只读）：`https://github.com/godsavethekingx-cloud/stock-v1224-two-stage-mainboard.git`
+- 网页地址：`https://github.com/godsavethekingx-cloud/stock-v1224-two-stage-mainboard`
+- 分支：`main`
+- 推送：需要拥有写权限的 PAT token，一次性传入 `git push https://x-access-token:<TOKEN>@github.com/...` ，token 不落盘。详细字段见 `git_remote.json`。
+- 拉取最新代码：读取 `/workspace/stock-v1224/system/run_auto.sh`，其已内置 git 同步，且不会覆盖阶段1输出 `night20_latest.json`。
+
 ### 阶段2 语法与卖出规则
 - 买入：当日开盘价买入 TOP5，持股 1 天。
 - 竞价分：低开/平开高配（≤0%:+15，≤1%:+10，≤2.5%:+5），大幅高开降权；剔除竞价 ≥9.5%（一字涨停买不进）。
