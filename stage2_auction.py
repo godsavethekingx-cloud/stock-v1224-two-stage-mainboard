@@ -44,9 +44,15 @@ SELL_RULE = {
 }
 
 def sell_plan(c):
-    tp = c['open_px'] * (1 + SELL_RULE['target_pct'] / 100)
-    sl = c['open_px'] * (1 - SELL_RULE['stop_pct'] / 100)
-    return {'buy_price': round(c['open_px'], 3),
+    open_px = c.get('open_px') or 0
+    # 防御: 未取到有效开盘价时避免生成 0 价买卖建议
+    if open_px <= 0:
+        return {'buy_price': 0, 'take_profit_pct': SELL_RULE['target_pct'],
+                'take_profit': 0, 'stop_loss_pct': SELL_RULE['stop_pct'],
+                'stop_loss': 0, 'invalid_open': True}
+    tp = open_px * (1 + SELL_RULE['target_pct'] / 100)
+    sl = open_px * (1 - SELL_RULE['stop_pct'] / 100)
+    return {'buy_price': round(open_px, 3),
             'take_profit_pct': SELL_RULE['target_pct'],
             'take_profit': round(tp, 3),
             'stop_loss_pct': SELL_RULE['stop_pct'],
@@ -95,9 +101,12 @@ def main():
             continue
         if op >= 9.5:
             continue
+        oprice = q.get('open_price') or 0
+        if oprice <= 0:
+            continue  # 未取到有效开盘价, 不进入候选
         base = t.get('v1224_score', 0)
         cands.append({'code': code, 'name': t['name'], 'base_score': base,
-                      'open_pct': round(op, 2), 'open_px': q.get('open_price') or 0,
+                      'open_pct': round(op, 2), 'open_px': oprice,
                       'comp': base + auction_bonus(op),
                       'sel_mode': t.get('sel_mode', '')})
     cands.sort(key=lambda x: -x['comp'])

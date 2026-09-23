@@ -46,7 +46,11 @@ def build_html(p):
     sug_name = REGIME_NAME.get(sug, sug)
     hot = p.get('hot_sectors') or {}
     accel = p.get('sector_accel') or {}
-    local_bull = p.get('local_bull') or []
+    local_bull_raw = p.get('local_bull') or []
+    if isinstance(local_bull_raw, dict):
+        local_bull = [k for k, _ in sorted(local_bull_raw.items(), key=lambda kv: -kv[1])]
+    else:
+        local_bull = list(local_bull_raw)
     top = p.get('top') or []
 
     # ---- 0. 大盘判态 ----
