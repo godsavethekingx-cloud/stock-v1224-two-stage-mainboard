@@ -1,0 +1,7 @@
+# Python
+__pycache__/
+*.pyc
+
+# 运行时产物（各阶段实时生成，不入库）
+night20_panel.json
+*.run.txt

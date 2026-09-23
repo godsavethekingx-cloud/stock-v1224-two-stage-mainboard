@@ -148,27 +148,63 @@ def main():
     topn.sort(key=lambda x: -x['v1224_score'])
 
     print(f"\n===== 今晚 TOP{N} ({REF_DATE}收盘) =====")
+    # ---- 完整面板数据(供日报/审计使用) ----
+    market = S.analyze_market(index_kl_ref) or {}
+    regime = 'BULL'
+    panel = {
+        'run_time': bj.strftime('%Y-%m-%d %H:%M:%S'),
+        'ref_date': REF_DATE,
+        'regime': regime,
+        'suggested_regime': market.get('suggested_regime', regime),
+        'market': market,
+        'hot_sectors': dict(hot_sectors),
+        'sector_accel': dict(sector_accel),
+        'local_bull': sorted(set(local_bull)) if isinstance(local_bull, (list, set)) else local_bull,
+        'top': [],
+    }
+
     out = []
     for i, r in enumerate(topn, 1):
         klf = all_full[r['code']]
         close = klf['c'][-1]
-        sig = list(r.get('signals') or [])[:3]
-        out.append({'rank': i, 'code': r['code'], 'name': r['name'],
-                    'v1224_score': r['v1224_score'], 'sel_mode': r['sel_mode'],
-                    'open_pct': round(all_tech[r['code']]['open_pct'], 2),
-                    'close': round(close, 2), 'signals': sig})
+        sig = list(r.get('signals') or [])
+        advice = S.generate_trade_advice(r, regime, sector_accel, local_bull)
+        secs = S.match_sector(r['name'], r['code'])
+        core = {'rank': i, 'code': r['code'], 'name': r['name'],
+                'v1224_score': r['v1224_score'], 'sel_mode': r['sel_mode'],
+                'open_pct': round(all_tech[r['code']]['open_pct'], 2),
+                'close': round(close, 2), 'signals': sig,
+                # 详细字段(日报)
+                'yest_pct': round(r.get('yest_pct', 0), 2),
+                'rsi6': round(r.get('rsi6', 0), 1),
+                'max_consec': r.get('max_consec', 0),
+                'zt_30d': r.get('zt_30d', 0),
+                'is_defensive': r.get('is_defensive', False),
+                'yest_close': round(r.get('yest_close', close), 2),
+                'ma5': round(r.get('ma5', 0), 2),
+                'ma10': round(r.get('ma10', 0), 2),
+                'sectors': secs,
+                'trade_advice': advice,
+                }
+        core['signals_full'] = core['signals']
+        out.append(core)
+        panel['top'].append(core)
         op_show = all_tech[r['code']]['open_pct']
-        print(f"{i:>2}. {r['name']:<8} {r['code']:<8} 分{r['v1224_score']:.1f} {r['sel_mode']:<9} 竞价开盘{op_show:+.1f}% 收{close:.2f} 信号{';'.join(sig)}", flush=True)
+        print(f"{i:>2}. {r['name']:<8} {r['code']:<8} 分{r['v1224_score']:.1f} {r['sel_mode']:<9} 竞价开盘{op_show:+.1f}% 收{close:.2f} 信号{';'.join(sig[:3])}", flush=True)
 
     os.makedirs('/workspace/edge', exist_ok=True)
     data = {'run_time': bj.strftime('%Y-%m-%d %H:%M:%S'), 'ref_date': REF_DATE,
             'regime': 'BULL', 'top': out}
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+    # 完整面板(供日报)
+    PANEL = os.path.join(_SYSTEM, 'night20_panel.json')
+    with open(PANEL, 'w', encoding='utf-8') as f:
+        json.dump(panel, f, ensure_ascii=False, indent=2)
     with open('/workspace/edge/night20_run.txt', 'a') as f:
         f.write(json.dumps({'run_time': data['run_time'], 'ref_date': REF_DATE,
                             'count': len(out)}, ensure_ascii=False) + "\n")
-    print(f"\n已保存 {OUT}  ({len(out)}只)")
+    print(f"\n已保存 {OUT} / {PANEL}  ({len(out)}只)")
 
 
 if __name__ == '__main__':
