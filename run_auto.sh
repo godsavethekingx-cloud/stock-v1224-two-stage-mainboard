@@ -42,10 +42,6 @@ fi
 
 # 丢弃本地未提交改动后拉取远端最新; 若远端在拉取中被改写由下面恢复逻辑保障
 git fetch origin >/dev/null 2>&1
-changed=0
-if git diff --quiet origin/main -- night20_latest.json 2>/dev/null; then
-    changed=1
-fi
 
 git reset --hard origin/main >/dev/null 2>&1
 echo "[run_auto] 已 git 同步最新代码 (commit: $(git rev-parse --short HEAD))"
@@ -56,7 +52,7 @@ if [ -n "$BACKUP" ] && [ -s "$BACKUP" ]; then
     echo "[run_auto] 已恢复本地阶段1输出 night20_latest.json (未用仓库文件覆盖)"
 fi
 [ -n "$BACKUP" ] && rm -f "$BACKUP"
-unset changed BACKUP
+unset BACKUP
 
 # ---------- 2. 执行目标阶段 ----------
 case "${STAGE}" in
