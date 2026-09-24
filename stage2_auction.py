@@ -14,15 +14,19 @@
 import json, sys, os, glob, time
 from datetime import datetime, timezone, timedelta
 
-_SYSTEM = '/workspace/stock-v1224/system'
+# 仓库根目录由本文件位置推导，clone 到任意路径均可运行
+ROOT = os.path.dirname(os.path.abspath(__file__))
+_SYSTEM = os.path.join(ROOT, 'system')
+EDGE = os.path.join(ROOT, 'edge')
 NIGHT_POOL = os.path.join(_SYSTEM, 'night20_latest.json')
 FINAL5 = 5
-OUT = '/workspace/edge/auction_top5.json'
+OUT = os.path.join(EDGE, 'auction_top5.json')
 
 beijing = datetime.now(timezone(timedelta(hours=8)))
 TODAY = beijing.strftime('%Y-%m-%d')
 
 sys.path.insert(0, _SYSTEM)
+sys.path.insert(0, ROOT)
 import scan_v1224 as S
 
 def auction_bonus(open_pct):
@@ -59,13 +63,20 @@ def sell_plan(c):
             'stop_loss': round(sl, 3)}
 
 def is_trading_day(today):
-    """校验今天是否A股交易日: 沪指最新一根K线日期是否=今天"""
+    """校验今天是否A股交易日: 使用自然周判断, 并排除长假休市"""
+    bj = datetime.now(timezone(timedelta(hours=8)))
+    if bj.weekday() >= 5:  # 周末
+        return False
     try:
         ik = S.get_index_kl(30)
         if not ik or not ik['d']:
             return False
-        # 沪指最新一根若含今天 或 今天在交易日序列中 即视为交易日(盘中已开盘)
-        return any(d.startswith(today) for d in ik['d'][-6:])
+        # 假期防误判: 最新指数K线距今过大视为休市
+        last = ik['d'][-1]
+        gap = (bj.date() - datetime.strptime(last, '%Y-%m-%d').date()).days
+        if gap > 7:
+            return False
+        return True
     except Exception:
         return False
 
@@ -75,8 +86,9 @@ def main():
     import scan_v1224 as S
     # 交易日校验: 非交易日(周末/节假日)不运行
     if not is_trading_day(TODAY):
-        print(f"今天{TODAY}非A股交易日, 跳过. (沪指无今日K线)")
-        with open('/workspace/edge/auction_top5_skip.txt', 'a') as f:
+        print(f"今天{TODAY}非A股交易日, 跳过. (周末/长假休市)")
+        os.makedirs(EDGE, exist_ok=True)
+        with open(os.path.join(EDGE, 'auction_top5_skip.txt'), 'a') as f:
             f.write(f"{beijing.strftime('%Y-%m-%d %H:%M:%S')} 非交易日跳过\n")
         return 0
     print("今日为交易日, 继续执行")
@@ -129,7 +141,7 @@ def main():
               'top5': top5,
               'all_20_auction': [{'code': c, 'name': name_of.get(c, ''), 'open_pct': v}
                                  for c, v in have.items()]}
-    os.makedirs('/workspace/edge', exist_ok=True)
+    os.makedirs(EDGE, exist_ok=True)
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
     print(f"\n已保存 {OUT}")

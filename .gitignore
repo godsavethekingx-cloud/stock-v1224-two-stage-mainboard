@@ -2,6 +2,13 @@
 __pycache__/
 *.pyc
 
-# 运行时产物（各阶段实时生成，不入库）
+# 运行时产物目录（各阶段实时生成，不入库）
+system/
+edge/
+reports/
+
+# 运行时产物文件
+night20_latest.json
 night20_panel.json
 *.run.txt
+auction_top5.json

@@ -11,8 +11,11 @@ import json, sys, os, time
 from datetime import datetime, timezone, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-_SYSTEM = '/workspace/stock-v1224/system'
+# 仓库根目录由本文件位置推导，clone 到任意路径均可运行
+ROOT = os.path.dirname(os.path.abspath(__file__))
+_SYSTEM = os.path.join(ROOT, 'system')
 sys.path.insert(0, _SYSTEM)
+sys.path.insert(0, ROOT)
 import scan_v1224 as S
 
 N = 20

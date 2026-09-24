@@ -14,9 +14,11 @@
 import json, os, sys
 from html import escape
 
-SYSTEM = '/workspace/stock-v1224/system'
+# 仓库根目录由本文件位置推导，clone 到任意路径均可运行
+ROOT = os.path.dirname(os.path.abspath(__file__))
+SYSTEM = os.path.join(ROOT, 'system')
 PANEL = os.path.join(SYSTEM, 'night20_panel.json')
-REPORT_DIR = os.path.join(os.path.dirname(SYSTEM), 'reports')  # /workspace/stock-v1224/reports
+REPORT_DIR = os.path.join(ROOT, 'reports')
 
 REGIME_NAME = {'BULL': '强势上行', 'RANGE_BULL': '震荡偏多', 'CORRECTION': '回调防守',
                'RELAY': '连板接力', 'USER': '用户条件'}
