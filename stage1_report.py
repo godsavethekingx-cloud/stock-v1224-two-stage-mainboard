@@ -32,6 +32,52 @@ REGIME_DESC = {
 
 MAINLINE_MAX = 24   # 主线标签最多展示数
 
+# ---- 仓位建议: 按判态给出总仓 / 攻防拆分 / 单票上限 ----
+def position_advice(sug, market):
+    """基于建议判态与量价给出仓位建议, 返回 dict 供版面渲染"""
+    vr = (market.get('vol_ratio') or 1.0)
+    consec_up = market.get('consec_up', 0)
+    above_ma5 = market.get('above_ma5', False)
+    above_ma20 = market.get('above_ma20', False)
+    conf = '强'
+    tone = ''
+    total = 0
+    attack = 0
+    defence = 0
+    single = 0
+    steps = []
+    if sug == 'BULL':
+        total = 0.8; attack = 0.6; defence = 0.2; single = 0.15
+        conf = '强'; tone = '5攻0防，激进主线龙头策略'
+        steps = ['沪指多头排列，量价健康，进攻仓可升至 6 成，专注主线龙头。',
+                 '防守仓保留 2 成，防止高位板块急速回撤。',
+                 '回调即主流，竞价低吸主线内不破位的强势股。']
+    elif sug == 'RELAY':
+        total = 0.7; attack = 0.5; defence = 0.2; single = 0.15
+        conf = '强'; tone = '连板接力 / 缩量回踩日策略'
+        steps = ['情绪高标活跃，重点做连板与缩量回踩接力。',
+                 '高位连板严格单票 ≤15%，破位即离场。',
+                 '总仓控制在 7 成，情绪降温当日主动降仓。']
+    elif sug == 'CORRECTION':
+        total = 0.4; attack = 0.15; defence = 0.25; single = 0.1
+        conf = '弱势'; tone = '回调防守，防守仓为主'
+        steps = ['大盘回调，总仓压至 4 成以下，防守为主。',
+                 '进攻仓极轻（≤1.5 成），只做逆势强势分支。',
+                 '放大防守仓至 2.5 成，跌破 MA5 快速降仓。']
+    else:  # RANGE_BULL
+        total = 0.5; attack = 0.4; defence = 0.1; single = 0.10
+        conf = '中'; tone = '震荡偏多，5攻1防均衡策略'
+        steps = ['震荡市总仓控制在 5 成以内，进可攻退可守。',
+                 '进攻仓 4 成聚焦板块热度+连板接力，防守仓 1 成压舱。',
+                 '单票 ≤10%，分散 3-5 只，涨停潮后高频回踩，等回踩企稳再低吸。']
+    # 量能细化提示
+    if vr >= 1.5:
+        steps.append(f'量比 {vr:.2f} 放量：资金活跃度提升，进攻仓可上调 1 成。')
+    elif vr <= 0.6:
+        steps.append(f'量比 {vr:.2f} 缩量：追涨动能不足，进攻仓下调 1 成，警惕冲高回落。')
+    return {'total': total, 'attack': attack, 'defence': defence, 'single': single,
+            'conf': conf, 'tone': tone, 'steps': steps}
+
 
 def fnum(x, nd=2, dash='-'):
     try:
@@ -134,6 +180,15 @@ def build_html(p):
         <div class="sig"><span class="sig-list">{sig_items}</span></div>
       </div>""")
     cards_html = ''.join(advice_cards)
+
+    # ---- 仓位建议 ----
+    pa = position_advice(sug, market)
+    pa_total = f"{pa['total']*100:.0f}%"
+    pa_attack = f"{pa['attack']*100:.0f}%"
+    pa_defence = f"{pa['defence']*100:.0f}%"
+    pa_single = f"{pa['single']*100:.0f}%"
+    pa_steps = ''.join(f'<li style="background:var(--bg2);border:1px solid var(--rule);border-radius:var(--radius-md);padding:12px 14px;font-size:14px;color:var(--text-secondary)">{s}</li>'
+                       for s in pa['steps'])
 
     # ---- 4. 操作建议文案 ----
     if consec_up >= 2 and above_ma5:
@@ -349,6 +404,14 @@ def build_html(p):
       <!-- 05 操作建议与风险 -->
       <section>
         <h2 class="sec"><span class="no">05</span>操作建议与风险提示</h2>
+        <h3>仓位建议（按当前判态 {escape(sug_name)}）</h3>
+        <div class="metric-grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); margin-bottom:16px;">
+          <div class="metric"><div class="m-label">建议总仓位</div><div class="m-val" style="font-size:26px">{pa_total}</div><div class="m-sub">{escape(pa['tone'])}</div></div>
+          <div class="metric"><div class="m-label">进攻仓（题材/连板）</div><div class="m-val up" style="font-size:26px">{pa_attack}</div><div class="m-sub">聚焦主线强势分支</div></div>
+          <div class="metric"><div class="m-label">防守仓（压舱）</div><div class="m-val" style="font-size:26px">{pa_defence}</div><div class="m-sub">应对突发回撤</div></div>
+          <div class="metric"><div class="m-label">单票最大仓位</div><div class="m-val" style="font-size:26px">{pa_single}</div><div class="m-sub">分散 3-5 只持仓</div></div>
+        </div>
+        <ul style="list-style:none; display:grid; gap:12px; margin-bottom:24px;">{pa_steps}</ul>
         <h3>核心操作建议</h3>
         <ul style="list-style:none; display:grid; gap:12px;">{ops_html}</ul>
         <h3>风险卡片</h3>
