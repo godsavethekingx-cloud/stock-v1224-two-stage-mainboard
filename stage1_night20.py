@@ -192,6 +192,7 @@ def main():
         op_show = all_tech[r['code']]['open_pct']
         print(f"{i:>2}. {r['name']:<8} {r['code']:<8} 分{r['v1224_score']:.1f} {r['sel_mode']:<9} 竞价开盘{op_show:+.1f}% 收{close:.2f} 信号{';'.join(sig[:3])}", flush=True)
 
+    os.makedirs(_SYSTEM, exist_ok=True)   # 自愈: 确保阶段1输出目录存在
     os.makedirs('/workspace/edge', exist_ok=True)
     data = {'run_time': bj.strftime('%Y-%m-%d %H:%M:%S'), 'ref_date': REF_DATE,
             'regime': 'BULL', 'top': out}

@@ -388,6 +388,10 @@ def main():
         f.write(html)
     n = len(p.get('top', []))
     print(f"[stage1_report] 阶段1日报已生成: {out_path}  (TOP{n}, ref_date={ref})")
+    print("[stage1_report] <<<HTML_REPORT_BEGIN>>>")
+    sys.stdout.write(html)
+    sys.stdout.flush()
+    print("\n[stage1_report] <<<HTML_REPORT_END>>>")
     return 0
 
 
