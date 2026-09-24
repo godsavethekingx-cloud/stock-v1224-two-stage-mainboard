@@ -41,7 +41,6 @@ def main():
     bj = datetime.now(timezone(timedelta(hours=8)))
     print(f"[阶段1] 晚间全盘选TOP{N}  {bj.strftime('%Y-%m-%d %H:%M:%S')}", flush=True)
 
-    # 交易日校验: 以沪指最新一根K线日期判断, 仅当==今天才视为当日收盘后运行
     try:
         index_kl_ref = S.get_index_kl(80)
     except Exception as e:
@@ -50,11 +49,19 @@ def main():
     if not index_kl_ref or not index_kl_ref['d']:
         print("!! 指数K线为空, 终止")
         return 1
-    REF_DATE = index_kl_ref['d'][-1]
-    if not REF_DATE.startswith(TODAY):
-        print(f"今天{TODAY}非A股交易日 (最新指数K线{REF_DATE}), 跳过.")
+    weekday = bj.weekday()  # 0=周一 ... 6=周日
+    if weekday >= 5:
+        print(f"今天{TODAY}为周末, 跳过.")
         with open('/workspace/edge/night20_skip.txt', 'a') as f:
-            f.write(f"{bj.strftime('%Y-%m-%d %H:%M:%S')} 非交易日跳过 (latest index {REF_DATE})\n")
+            f.write(f"{bj.strftime('%Y-%m-%d %H:%M:%S')} 周末跳过\n")
+        return 0
+    # 长假防误判: 最新指数K线距今过大则视为休市
+    REF_DATE = index_kl_ref['d'][-1]
+    day_gap = (bj.date() - datetime.strptime(REF_DATE, '%Y-%m-%d').date()).days
+    if day_gap > 7:
+        print(f"今天{TODAY}疑似长假休市 (最新指数K线{REF_DATE}, 距今{day_gap}天), 跳过.")
+        with open('/workspace/edge/night20_skip.txt', 'a') as f:
+            f.write(f"{bj.strftime('%Y-%m-%d %H:%M:%S')} 长假休市跳过 (latest index {REF_DATE})\n")
         return 0
     print(f"今日为交易日, REF_DATE={REF_DATE}, 继续执行")
 
