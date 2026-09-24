@@ -70,7 +70,8 @@ def is_trading_day(today):
     try:
         ik = S.get_index_kl(30)
         if not ik or not ik['d']:
-            return False
+            # 指数K线获取失败(数据源暂时不可用)时回退到自然周判定, 避免漏跑
+            return True
         # 假期防误判: 最新指数K线距今过大视为休市
         last = ik['d'][-1]
         gap = (bj.date() - datetime.strptime(last, '%Y-%m-%d').date()).days
@@ -78,10 +79,14 @@ def is_trading_day(today):
             return False
         return True
     except Exception:
-        return False
+        return True  # 数据源异常时回退自然周, 宁可多跑也不漏掉交易日
 
 def main():
+    hhmm = beijing.strftime('%H%M')
     print(f"[阶段2] 竞价筛股  {beijing.strftime('%Y-%m-%d %H:%M:%S')}", flush=True)
+    # 运行时段提示: 理想窗口为 09:25 集合竞价撮合后
+    if hhmm < '0925':
+        print("[阶段2] !! 提示: 当前早于09:25, 集合竞价开盘价可能尚未完全推送, 结果仅供参考", flush=True)
     sys.path.insert(0, _SYSTEM)
     import scan_v1224 as S
     # 交易日校验: 非交易日(周末/节假日)不运行
@@ -104,6 +109,7 @@ def main():
     rt = S.get_realtime_quote(codes)
     cands = []
     have = {}
+    fresh_cnt = 0   # 统计开盘价已真实更新的标的数(健康度)
     for t in pool['top']:
         code = t['code']
         q = rt.get(code, {})
@@ -111,17 +117,31 @@ def main():
         op = q.get('open_pct')
         if op is None:
             continue
-        if op >= 9.5:
-            continue
         oprice = q.get('open_price') or 0
         if oprice <= 0:
             continue  # 未取到有效开盘价, 不进入候选
+        # 竞价数据新鲜度校验: 若今开==昨收 且现价==今开(完全未动), 视为数据未更新(假平开)
+        last_close = q.get('last_close') or 0
+        current = q.get('current') or 0
+        stale = False
+        if last_close > 0 and abs(oprice - last_close) < 1e-9 and abs(current - oprice) < 1e-9:
+            stale = True
+        if not stale:
+            fresh_cnt += 1
         base = t.get('v1224_score', 0)
         cands.append({'code': code, 'name': t['name'], 'base_score': base,
                       'open_pct': round(op, 2), 'open_px': oprice,
                       'comp': base + auction_bonus(op),
-                      'sel_mode': t.get('sel_mode', '')})
+                      'sel_mode': t.get('sel_mode', ''),
+                      'stale': stale})
     cands.sort(key=lambda x: -x['comp'])
+    # 健康度警告: 若大部分标的开盘价未真实更新, 结果可能不可靠
+    total_seen = len(have)
+    if total_seen > 0:
+        fresh_ratio = fresh_cnt / total_seen * 100
+        print(f"[阶段2] 开盘价数据更新健康度: {fresh_cnt}/{total_seen} ({fresh_ratio:.0f}%)", flush=True)
+        if fresh_ratio < 60:
+            print("[阶段2] !! 警告: 过半标的数据未更新(可能仍在竞价等待推送), 结果仅供参考", flush=True)
     top5 = cands[:FINAL5]
 
     print(f"\n===== {TODAY} 竞价筛出的 TOP{FINAL5} =====")
